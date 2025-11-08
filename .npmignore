@@ -1,0 +1,39 @@
+# Source files
+src/
+tests/
+*.test.ts
+*.spec.ts
+
+# Configuration
+tsconfig.json
+vitest.config.ts
+eslint.config.js
+
+# Development
+.env
+.env.example
+.env.*
+node_modules/
+.idea/
+.vscode/
+
+# Cache
+.sb-dev-cache/
+.test-cache/
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+
+# Version control
+.git/
+.gitignore
+
+# Documentation (except README)
+*.md
+!README.md
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

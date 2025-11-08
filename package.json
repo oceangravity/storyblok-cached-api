@@ -1,0 +1,77 @@
+{
+  "name": "storyblok-cached-api",
+  "version": "1.0.0",
+  "description": "A disk-caching wrapper for Storyblok API in Astro projects to speed up development",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build && pnpm run test:run",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "storyblok",
+    "cache",
+    "astro",
+    "development",
+    "disk-cache",
+    "cms"
+  ],
+  "author": "Juan Carlos Galindo Navarro <media.bak@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/storyblok-cached-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tu-usuario/storyblok-cached-api/issues"
+  },
+  "homepage": "https://github.com/tu-usuario/storyblok-cached-api#readme",
+  "peerDependencies": {
+    "@storyblok/astro": ">=7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@storyblok/astro": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@storyblok/astro": "^7.1.1",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "@vitest/coverage-v8": "^4.0.7",
+    "@vitest/ui": "^4.0.7",
+    "eslint": "^9.28.0",
+    "happy-dom": "^20.0.10",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1",
+    "vite": "^6.3.5",
+    "vitest": "^4.0.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
